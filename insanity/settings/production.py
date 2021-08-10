@@ -11,7 +11,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["insanity-learner.herokuapp.com"]
+ALLOWED_HOSTS = [".herokuapp.com"]
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
@@ -103,5 +103,3 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
 
 STATIC_ROOT = STATIC_ROOT_DIR
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-

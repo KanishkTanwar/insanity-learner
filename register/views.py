@@ -15,11 +15,14 @@ def signup(request):
         if request.method == 'POST':
             form = CreateUserForm(request.POST)
             if form.is_valid():
-                form.save()
+                u = form.save()
                 user = form.cleaned_data.get('username')
+                login(request, u)
                 messages.success(request, 'Account was created for ' + user)
-
                 return redirect('home:index')
+            else:
+                messages.success(request, "password must be greater than 8 character and not contain username")
+                return redirect('register:signin')
 
         return render(request, 'register/signin.html', context)
 

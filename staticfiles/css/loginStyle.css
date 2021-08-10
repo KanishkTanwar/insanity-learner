@@ -5,24 +5,23 @@
 }
 
 body {
-	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("../images/extra/backwallpaper.jpg");
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("../images/extra/backwallpaper.jpg")!important;
 	background-size: cover;
 }
 .form-box
 {
 	width: 380px;
-	height: 500px;
+	height: 600px;
 	position: relative;
-	margin: 15% auto;
+	margin: 8% auto;
 	background: #fff8;
 	padding: 5px;
 	border-radius: 5px;
 	overflow: hidden;
-	box-shadow: 0px 0px 100px rgba(0,0,0,0.4);
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
 }
 
-.button-box
-{
+.button-box{
 	width: 220px;
 	margin: 35px auto;
 	position: relative;
@@ -167,7 +166,7 @@ span
 .other {
 	display: grid;
 	justify-content: center;
-	margin-top:500px;
+	margin-top:400px;
 
 }
 

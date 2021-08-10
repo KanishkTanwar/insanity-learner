@@ -37,15 +37,16 @@
 			</div>
 
 			<!-- Login Form -->
-			<form id="login" class="input-group" action="index.html">
+			<form id="login" class="input-group" action="{% url 'register:signin' %}" method="POST">{% csrf_token %}
 				<div class="inp">
-					<img src="{% static 'images/icon/user.png' %}"><input type="text" id="email" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+					<img src="{% static 'images/icon/user.png' %}"><input type="text" id="email" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required" name="username">
 				</div>
 				<div class="inp">
-					<img src="{% static 'images/icon/password.png' %}"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+					<img src="{% static 'images/icon/password.png' %}"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required" name="password">
 				</div>
 				<input type="checkbox" class="check-box">Remember Password
 				<button type="submit" class="submit-btn">Log In</button>
+				<h5>{{form.errors|safe}}</h5>
 			</form>
 
 
@@ -59,11 +60,11 @@
 			</div>
 
 			<!-- Registration Form -->
-			<form id="register" class="input-group">
-				<input type="text" class="input-field" placeholder="Full Name" required="required">
-				<input type="email" class="input-field" placeholder="Email Address" required="required">
-				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
-				<input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+			<form id="register" class="input-group" method="POST" action="{% url 'register:signup' %}">{% csrf_token %}
+				<input type="text" class="input-field" placeholder="Username" required="required" name="username">
+				<input type="email" class="input-field" placeholder="Email Address" required="required" name="email">
+				<input type="password" class="input-field" placeholder="Create Password" name="password1" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="password2" required="required">
 				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
 				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
 			</form>

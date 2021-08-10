@@ -19,7 +19,7 @@ def signup(request):
                 user = form.cleaned_data.get('username')
                 messages.success(request, 'Account was created for ' + user)
 
-                return redirect('register:signin')
+                return redirect('home:index')
 
         return render(request, 'register/signin.html', context)
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=en>
+   {% load static %}
+   <head>
+
+      {% block title %} {% endblock %} {% block meta %} {% endblock %}
+        <meta charset="UTF-8">
+        <meta name=theme-color content=#3486eb>
+        <link rel="shortcut icon" type="png" href="{% static 'images/icon/favicon1.png' %}">
+        <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+        <meta name="desciption" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+        window.onload = function(){
+            $(window).on('scroll', function(){
+                if($(window).scrollTop()){
+                  $('nav').addClass('black');
+                 }else {
+               $('nav').removeClass('black');
+             }
+            })
+          }
+        </script>
+      {% include "snippets/css.html" %}
+      {% block css %}
+
+      {% endblock %}
+   </head>
+      <body>
+            {% include "snippets/navbar.html" %}
+            {% if messages %} {% for message in messages %}
+               <div class="alert alert-{{message.tags}}" style="text-align: center;"> <strong>{{message}}</strong></div>
+            {% endfor %} {% endif %}
+
+            {% block content_block %}
+
+            {% endblock %}
+            {% include "snippets/js.html" %}
+            {% include "snippets/footer.html" %}
+      </body>
+           {% block js %}
+
+        {% endblock %}
+</html>

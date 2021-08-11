@@ -21,7 +21,7 @@ def signup(request):
                 messages.success(request, 'Account was created for ' + user)
                 return redirect('home:index')
             else:
-                messages.success(request, "password must be greater than 8 character and not contain username")
+                messages.warning(request, "password must be greater than 8 character and not contain username")
                 return redirect('register:signin')
 
         return render(request, 'register/signin.html', context)

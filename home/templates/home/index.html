@@ -30,16 +30,16 @@
 	<br><br>
 	<div class="course">
 		<center><div class="cbox">
-		<div class="det"><a href="subjects/frontend.html"><img src="{% static 'images/courses/book.png' %}">Frontend</a></div>
-		<div class="det"><a href="subjects/backend.html"><img src="{% static 'images/courses/d1.png' %}">Backend</a></div>
-		<div class="det"><a href="subjects/backend.html"><img src="{% static 'images/courses/paper.png' %}">DSA</a></div>
-		<div class="det"><a href="subjects/quiz.html"><img src="{% static 'images/courses/d1.png' %}">Quiz</a></div>
+		<div class="det"><a href="{% url 'home:frontend' %}"><img src="{% static 'images/courses/book.png' %}">Frontend</a></div>
+		<div class="det"><a href="{% url 'home:backend' %}"><img src="{% static 'images/courses/d1.png' %}">Backend</a></div>
+		<div class="det"><a href="{% url 'home:backend' %}"><img src="{% static 'images/courses/paper.png' %}">DSA</a></div>
+		<div class="det"><a href="{% url 'home:quiz' %}"><img src="{% static 'images/courses/d1.png' %}">Quiz</a></div>
 		</div></center>
 		<div class="cbox">
-		<div class="det"><a href="subjects/insanity.html"><img src="{% static 'images/courses/computer.png' %}">C</a></div>
-		<div class="det"><a href="subjects/insanity.html"><img src="{% static 'images/courses/data.png' %}">C++</a></div>
-		<div class="det"><a href="subjects/insanity.html"><img src="{% static 'images/courses/algo.png' %}">Java</a></div>
-		<div class="det det-last"><a href="subjects/insanity.html"><img src="{% static 'images/courses/projects.png' %}">Ethical Hacking</a></div>
+		<div class="det"><a href="{% url 'home:insanity' %}"><img src="{% static 'images/courses/computer.png' %}">C</a></div>
+		<div class="det"><a href="{% url 'home:insanity' %}"><img src="{% static 'images/courses/data.png' %}">C++</a></div>
+		<div class="det"><a href="{% url 'home:insanity' %}"><img src="{% static 'images/courses/algo.png' %}">Java</a></div>
+		<div class="det det-last"><a href="{% url 'home:insanity' %}"><img src="{% static 'images/courses/projects.png' %}">Ethical Hacking</a></div>
 		</div>
 	</div>
 
